@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Coding Calculator 🧮
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, animated calculator built with React.  
+It supports basic arithmetic operations along with percentage (`%`) and floor division (`//`) and is styled with a neon, gradient border and futuristic fonts.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔍 Introduction
 
-### `npm start`
+**Coding Calculator** is a simple yet polished calculator web app created using **Create React App**.  
+The focus of this project is:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clean and readable React code.
+- Safe expression evaluation (no direct `eval`).
+- A visually appealing UI with animated gradients and glowing borders.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+It’s ideal as:
 
-### `npm test`
+- A mini front-end project for your portfolio.
+- A learning reference for React state handling and custom styling.
+- A base to extend into a more advanced calculator.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧰 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Frontend**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React** (functional components + hooks)
+- **JavaScript (ES6+)**
+- **CSS3** (custom styling, gradients, animations)
+- **Google Fonts**: Orbitron, Audiowide
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Tooling**
 
-### `npm run eject`
+- **Create React App** (build system, dev server)
+- **react-scripts**
+- **Testing libraries** (already configured by CRA, optional):
+  - `@testing-library/react`
+  - `@testing-library/jest-dom`
+  - `@testing-library/user-event`
+  - `@testing-library/dom`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ✨ Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Basic arithmetic operations**:  
+  `+`, `-`, `*`, `/`
+- **Percentage support (`%`)**  
+  - Expressions like `50%` are treated as `50 / 100`.
+- **Floor division (`//`)**  
+  - Similar to Python-style floor division.  
+  - Example: `7//2` → `3`
+- **Clear button (`C`)**  
+  - Instantly resets the input.
+- **Decimal and double-zero support**  
+  - `.` and `00` buttons included.
+- **Error handling**  
+  - Invalid expressions show `Error` instead of breaking the app.
+- **Input sanitization**  
+  - Only digits, operators (`+ - * / % . ( )` and `//`) and spaces are allowed before evaluation.
+- **Futuristic UI & animations**  
+  - Neon animated border using `conic-gradient`.
+  - Animated gradient buttons.
+  - Custom display using the **Orbitron** font for a digital look.
+- **Responsive centered layout**  
+  - Calculator is centered in the viewport with a dark background.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📁 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+calculator/
+├─ node_modules/
+├─ public/
+│  ├─ index.html
+│  ├─ favicon.ico
+│  ├─ manifest.json
+│  └─ ...
+├─ src/
+│  ├─ App.js           # Renders the main heading + Calculator component
+│  ├─ App.css          # Global styles and heading animation
+│  ├─ calculator.js    # Core Calculator component (logic + UI)
+│  ├─ calculator.css   # Calculator layout, animations, gradients
+│  ├─ index.js         # React entry point
+│  ├─ index.css        # Global resets (if any)
+│  ├─ reportWebVitals.js
+│  ├─ setupTests.js
+│  └─ ...
+├─ package.json
+├─ package-lock.json
+└─ README.md (this file)
